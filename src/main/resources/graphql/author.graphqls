@@ -4,9 +4,17 @@ type Author {
     lastName: String!
 }
 
+fragment AuthorInfo on Author {
+    id
+    firstName
+    lastName
+}
+
 type Query {
     findAllAuthors: [Author]!
     countAuthors: Long!
+    test: Long
+
 }
 
 type Mutation {

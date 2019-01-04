@@ -8,6 +8,7 @@ import com.example.DemoGraphQL.repository.BookRepository;
 import com.example.DemoGraphQL.resolver.BookResolver;
 import com.example.DemoGraphQL.resolver.Mutation;
 import com.example.DemoGraphQL.resolver.Query;
+import com.example.DemoGraphQL.resolver.QueryA;
 import graphql.ExceptionWhileDataFetching;
 import graphql.GraphQLError;
 import graphql.servlet.GraphQLErrorHandler;
@@ -62,6 +63,11 @@ public class DemoGraphQlApplication {
 	public Query query(AuthorRepository authorRepository, BookRepository bookRepository) {
 		return new Query(authorRepository, bookRepository);
 	}
+
+//	@Bean
+//	public QueryA queryA(AuthorRepository authorRepository, BookRepository bookRepository) {
+//		return new QueryA(authorRepository, bookRepository);
+//	}
 
 	@Bean
 	public Mutation mutation(AuthorRepository authorRepository, BookRepository bookRepository) {

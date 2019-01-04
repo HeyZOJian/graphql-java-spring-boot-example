@@ -26,7 +26,7 @@ public class Mutation implements GraphQLMutationResolver {
         return author;
     }
 
-    public Book newBook(String title, String isbn, Integer pageCount, Long authorId) {
+    public Book newBook(String title, String isbn, Integer pageCount, Long authorId, Long longParam) {
         Book book = new Book();
         book.setAuthor(new Author(authorId));
         book.setTitle(title);
